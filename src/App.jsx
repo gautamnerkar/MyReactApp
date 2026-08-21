@@ -5,7 +5,8 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>Real-time Button Press Counter</h1>
+      <h1>Button counter app</h1>
+      <p className="welcome">hello user welcome to the app</p>
       <div className="counter">{count}</div>
       <button className="btn" onClick={() => setCount(c => c + 1)}>
         Press me

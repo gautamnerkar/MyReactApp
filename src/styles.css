@@ -16,6 +16,12 @@ body {
   box-shadow: 0 6px 24px rgba(12, 24, 40, 0.08);
 }
 
+.welcome {
+  margin: 0.5rem 0 1rem;
+  color: #374151;
+  font-size: 1rem;
+}
+
 .counter {
   font-size: 3.5rem;
   font-weight: 700;
