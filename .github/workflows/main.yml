@@ -1,4 +1,4 @@
-name: Caching and Artifacts
+name: job concurrency
 
 on:
  push:
@@ -8,24 +8,16 @@ jobs:
  build:
   runs-on: ubuntu-latest
 
+  concurrency:
+    group: deploy
+    cancel-in-progress: true
+
   steps:
     - name: Checkout_Repository
       uses: actions/checkout@v4
-
-    - name: Setup node js
-      uses: actions/setup-node@v6.5.0
-      with:
-       node-version: 22.x
-       cache: "npm"
-
     - name: Install Dependencies
       run: npm install
-
     - name: Build app
       run: npm run build
-
-    - name: Upload build on artifacts
-      uses: actions/upload-artifact@v7.0.1
-      with:
-       name: Nextjs build
-       path: dist/
+    - name: Deploy app
+      run: echo "Deploying....."
