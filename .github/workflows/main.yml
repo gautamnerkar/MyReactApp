@@ -27,7 +27,7 @@ jobs:
      - name: Artificats collection
        uses: actions/upload-artifact@v7.0.1
        with:
-        name: # next js build
-        path: ./
+        name: next js build
+        path: ./dist/
        
        
