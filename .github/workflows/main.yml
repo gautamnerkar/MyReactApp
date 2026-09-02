@@ -21,6 +21,8 @@ jobs:
 
      - name: Build app
        run: npm run build
+     - name: Sleep
+       run: sleep 30
      - name: Final Message
        run: echo "workflow completed"
        
